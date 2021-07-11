@@ -47,16 +47,16 @@ export default function Sidebar() {
             <div className="dot-nav d-green"></div>
           </div>
           <ul>
-            {/* <Link to="/"> */}
+            <Link to="/">
             <li>
               <img src={FolderIcon} alt="logo folder" />
             </li>
-            {/* </Link> */}
-            {/* <Link to="/edit"> */}
+            </Link>
+            <Link to="/edit">
             <li>
               <img src={LogoEdit} alt="logo edit" />
             </li>
-            {/* </Link> */}
+            </Link>
 
             <li>
               <img src={Tools} alt="logo tools" />
