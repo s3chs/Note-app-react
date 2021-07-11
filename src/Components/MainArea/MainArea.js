@@ -13,7 +13,7 @@ export default function MainArea() {
         <input type="text" id="subtitle" />
 
         <label htmlFor="txtbody">Votre Texte</label>
-        <textArea id="txtbody" placeholder="Votre texte ..."></textArea>
+        <textarea id="txtbody" placeholder="Votre texte ..."></textarea>
         <button>Enregistrer</button>
       </form>
     </div>

@@ -5,6 +5,7 @@ import FolderIcon from "./ImgsSidebar/folder.svg";
 import Tools from "./ImgsSidebar/settings.svg";
 import Menu from "./ImgsSidebar/menu.svg";
 import "./Sidebar.css";
+import SideNotes from "../SideNotes/SideNotes";
 
 export default function Sidebar() {
   const [checkWidth, setcheckWidth] = useState(window.innerWidth);
@@ -48,14 +49,14 @@ export default function Sidebar() {
           </div>
           <ul>
             <Link to="/">
-            <li>
-              <img src={FolderIcon} alt="logo folder" />
-            </li>
+              <li>
+                <img src={FolderIcon} alt="logo folder" />
+              </li>
             </Link>
             <Link to="/edit">
-            <li>
-              <img src={LogoEdit} alt="logo edit" />
-            </li>
+              <li>
+                <img src={LogoEdit} alt="logo edit" />
+              </li>
             </Link>
 
             <li>
@@ -63,6 +64,7 @@ export default function Sidebar() {
             </li>
           </ul>
         </div>
+        <SideNotes />
       </nav>
     </>
   );
