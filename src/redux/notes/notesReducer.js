@@ -1,3 +1,4 @@
+/* eslint-disable default-case */
 import { v4 as uuidv4 } from "uuid";
 
 const INITIAL_STATE = {
@@ -25,6 +26,14 @@ const INITIAL_STATE = {
 
 export default function notesReducer(state = INITIAL_STATE, action) {
   switch (action.type) {
+    case "DELETENOTE": {
+      const newNotesArr = [...state.notes].filter(
+        (note) => note.id !== action.payload
+      );
+      return {
+        notes: newNotesArr,
+      };
+    }
   }
   return state;
 }
