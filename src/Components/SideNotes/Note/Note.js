@@ -17,6 +17,13 @@ export default function Note(props) {
     });
   };
 
+  const modifyNote = () => {
+    dispatch({
+      type: "VISUALIZENOTE",
+      payload: props,
+    });
+  };
+
   return (
     <li className="txt-note-prev">
       <div className="bloc-note-left">
@@ -27,9 +34,11 @@ export default function Note(props) {
         <button onClick={deleteNote}>
           <img src={delIcon} alt="delete icon" />
         </button>
-        <button>
-          <img src={edit} alt="edit icon" />
-        </button>
+        <Link to="/edit">
+          <button onClick={modifyNote}>
+            <img src={edit} alt="edit icon" />
+          </button>
+        </Link>
       </div>
     </li>
   );
